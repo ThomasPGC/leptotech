@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leptotech – Ingénieur calcul structure acier, bois, aluminium | Occitanie</title>
+  <meta name="description" content="Bureau d'études structure indépendant spécialisé acier, bois et aluminium. Études APS/APD/DCE, notes de calcul d'exécution pour charpentiers et serruriers. Intervention en Occitanie et toute la France.">
+  <meta name="keywords" content="bureau d'études structure, ingénieur calcul structure, charpente métallique, acier, bois, aluminium, APS APD DCE, Occitanie, Hérault, Gard, Aveyron, note de calcul exécution">
+  <meta property="og:title" content="Leptotech – Ingénieur calcul structure">
+  <meta property="og:description" content="Bureau d'études structure indépendant – acier, bois, aluminium. APS/APD/DCE et notes d'exécution.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leptotech.com">
+  <link rel="canonical" href="https://leptotech.com">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Leptotech",
+    "description": "Bureau d'études structure indépendant spécialisé acier, bois et aluminium",
+    "url": "https://leptotech.com",
+    "telephone": "+33467713717",
+    "areaServed": ["Occitanie", "France"],
+    "serviceType": ["Ingénierie structurelle", "Calcul de charpente", "Bureau d'études"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #1A1A1A;
+      --ink-soft:  #4A4A4A;
+      --ink-muted: #888;
+      --steel:     #3D6498;
+      --steel-lt:  #EEF3FA;
+      --bg:        #FAFAFA;
+      --white:     #FFFFFF;
+      --rule:      #E0E0E0;
+      --fs-xs:     0.75rem;
+      --fs-sm:     0.875rem;
+      --fs-base:   1rem;
+      --fs-md:     1.125rem;
+      --fs-lg:     1.5rem;
+      --fs-xl:     2.25rem;
+      --fs-2xl:    3.5rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: var(--fs-base);
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 0.75rem;
+      text-decoration: none; color: var(--ink);
+    }
+    .nav-brand .wordmark {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500; font-size: 1.25rem; letter-spacing: 0.04em;
+    }
+    .nav-brand .wordmark span { color: var(--steel); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a {
+      text-decoration: none; color: var(--ink-soft);
+      font-size: var(--fs-sm); font-weight: 400;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--steel); }
+    .nav-cta {
+      background: var(--steel); color: var(--white) !important;
+      padding: 0.5rem 1.25rem; border-radius: 4px;
+      font-weight: 500 !important;
+    }
+    .nav-cta:hover { background: #2d5080; color: var(--white) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 88vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 4rem;
+      max-width: 1200px; margin: 0 auto;
+      padding: 6rem 2rem 4rem;
+    }
+    .hero-text {}
+    .hero-eyebrow {
+      font-size: var(--fs-xs); font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--steel);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 300; line-height: 1.2;
+      color: var(--ink); margin-bottom: 1.5rem;
+    }
+    .hero-title strong { font-weight: 600; }
+    .hero-subtitle {
+      font-size: var(--fs-md); color: var(--ink-soft);
+      max-width: 480px; margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block; padding: 0.875rem 2rem;
+      background: var(--steel); color: var(--white);
+      text-decoration: none; border-radius: 4px;
+      font-weight: 500; font-size: var(--fs-sm);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #2d5080; transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-block; padding: 0.875rem 2rem;
+      border: 1.5px solid var(--rule); color: var(--ink);
+      text-decoration: none; border-radius: 4px;
+      font-weight: 400; font-size: var(--fs-sm);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--steel); color: var(--steel); }
+
+    .hero-visual {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--rule); border-radius: 6px;
+      padding: 1.25rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .hero-card:hover {
+      border-color: var(--steel);
+      box-shadow: 0 4px 20px rgba(61,100,152,0.1);
+    }
+    .hero-card:first-child { grid-column: 1 / -1; }
+    .card-label {
+      font-size: var(--fs-xs); letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--steel);
+      margin-bottom: 0.5rem; font-weight: 500;
+    }
+    .card-title { font-size: var(--fs-sm); font-weight: 500; color: var(--ink); }
+    .card-sub { font-size: var(--fs-xs); color: var(--ink-muted); margin-top: 0.25rem; }
+
+    /* ── STEEL LINE (signature) ── */
+    .steel-line {
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--steel) 20%, var(--steel) 80%, transparent 100%);
+      opacity: 0.25;
+      margin: 0;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-eyebrow {
+      font-size: var(--fs-xs); font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--steel);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 300; color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .section-title strong { font-weight: 600; }
+    .section-lead {
+      font-size: var(--fs-md); color: var(--ink-soft);
+      max-width: 640px; line-height: 1.7;
+    }
+
+    /* ── OFFRES ── */
+    #offres { background: var(--white); }
+    .offres-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .offre-card {
+      border: 1px solid var(--rule); border-radius: 6px;
+      padding: 2rem; position: relative;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: var(--bg);
+    }
+    .offre-card:hover {
+      border-color: var(--steel);
+      box-shadow: 0 4px 24px rgba(61,100,152,0.08);
+    }
+    .offre-num {
+      font-size: var(--fs-xs); color: var(--steel); font-weight: 600;
+      letter-spacing: 0.1em; margin-bottom: 1rem;
+    }
+    .offre-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: var(--fs-lg); font-weight: 500;
+      color: var(--ink); margin-bottom: 1rem; line-height: 1.3;
+    }
+    .offre-desc {
+      font-size: var(--fs-sm); color: var(--ink-soft);
+      line-height: 1.7; margin-bottom: 1.5rem;
+    }
+    .offre-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      font-size: var(--fs-xs); font-weight: 500;
+      background: var(--steel-lt); color: var(--steel);
+      padding: 0.25rem 0.625rem; border-radius: 3px;
+    }
+    .offre-link {
+      display: inline-block; margin-top: 1.5rem;
+      font-size: var(--fs-sm); color: var(--steel);
+      text-decoration: none; font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .offre-link:hover { border-color: var(--steel); }
+
+    /* ── ATOUTS ── */
+    #atouts { background: var(--ink); color: var(--white); }
+    #atouts .section-title { color: var(--white); }
+    #atouts .section-lead { color: rgba(255,255,255,0.6); }
+    .atouts-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; margin-top: 3rem;
+    }
+    .atout {
+      padding: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .atout-icon {
+      width: 36px; height: 36px; margin-bottom: 1.25rem;
+      opacity: 0.7;
+    }
+    .atout-title {
+      font-size: var(--fs-base); font-weight: 600;
+      margin-bottom: 0.75rem; color: var(--white);
+    }
+    .atout-text { font-size: var(--fs-sm); color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    /* ── RÉALISATIONS ── */
+    #realisations { background: var(--bg); }
+    .real-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1rem; margin-top: 3rem;
+    }
+    .real-card {
+      background: var(--white); border: 1px solid var(--rule);
+      border-radius: 6px; overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .real-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .real-img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+      background: var(--steel-lt);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .real-img svg { width: 48px; height: 48px; opacity: 0.2; }
+    .real-body { padding: 1.25rem; }
+    .real-type {
+      font-size: var(--fs-xs); letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--steel);
+      font-weight: 500; margin-bottom: 0.5rem;
+    }
+    .real-title { font-size: var(--fs-sm); font-weight: 500; color: var(--ink); }
+    .real-detail { font-size: var(--fs-xs); color: var(--ink-muted); margin-top: 0.25rem; }
+
+    /* ── ZONE ── */
+    #zone { background: var(--white); }
+    .zone-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .zone-map {
+      background: var(--steel-lt); border-radius: 6px;
+      aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--steel-lt); font-size: var(--fs-sm);
+      border: 1px solid var(--rule);
+    }
+    .zone-list { margin-top: 1.5rem; }
+    .zone-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.75rem 0; border-bottom: 1px solid var(--rule);
+      font-size: var(--fs-sm); color: var(--ink-soft);
+    }
+    .zone-item::before {
+      content: ''; width: 6px; height: 6px;
+      background: var(--steel); border-radius: 50%; flex-shrink: 0;
+    }
+    .zone-note {
+      margin-top: 1.5rem; font-size: var(--fs-sm);
+      color: var(--ink-muted); font-style: italic;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--bg); }
+    .contact-box {
+      background: var(--white); border: 1px solid var(--rule);
+      border-radius: 8px; padding: 3rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      margin-top: 3rem;
+    }
+    .contact-info h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: var(--fs-lg); font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+    .contact-detail {
+      display: flex; align-items: flex-start; gap: 1rem;
+      margin-bottom: 1.25rem; font-size: var(--fs-sm); color: var(--ink-soft);
+    }
+    .contact-detail svg { flex-shrink: 0; margin-top: 2px; }
+    .contact-detail a { color: var(--steel); text-decoration: none; }
+    .contact-detail a:hover { text-decoration: underline; }
+    .contact-form-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: var(--fs-lg); font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label {
+      display: block; font-size: var(--fs-xs); font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--ink-muted); margin-bottom: 0.5rem;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 0.75rem 1rem;
+      border: 1px solid var(--rule); border-radius: 4px;
+      font-family: 'Inter', sans-serif; font-size: var(--fs-sm);
+      color: var(--ink); background: var(--bg);
+      transition: border-color 0.2s;
+      resize: vertical;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--steel);
+    }
+    .form-submit {
+      width: 100%; padding: 0.875rem;
+      background: var(--steel); color: var(--white);
+      border: none; border-radius: 4px;
+      font-family: 'Inter', sans-serif; font-size: var(--fs-sm); font-weight: 500;
+      cursor: pointer; transition: background 0.2s;
+    }
+    .form-submit:hover { background: #2d5080; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink); color: rgba(255,255,255,0.4);
+      padding: 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: var(--fs-xs);
+    }
+    footer .wordmark { color: rgba(255,255,255,0.7); font-weight: 500; letter-spacing: 0.04em; }
+    footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ── ANIMATIONS ── */
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s, transform 0.5s; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 3rem; }
+      .hero-visual { display: none; }
+      .offres-grid, .atouts-grid, .real-grid { grid-template-columns: 1fr; }
+      .zone-content, .contact-box { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in { opacity: 1; transform: none; }
+      .btn-primary:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <span class="wordmark">LEPT<span>O</span>TECH</span>
+  </a>
+  <div class="nav-links">
+    <a href="#offres">Offres</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#zone">Zone d'intervention</a>
+    <a href="#contact" class="nav-cta">Demander un devis</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-text fade-in">
+    <p class="hero-eyebrow">Bureau d'études structure indépendant</p>
+    <h1 class="hero-title">
+      Ingénieur calcul structure<br>
+      <strong>acier · bois · aluminium</strong>
+    </h1>
+    <p class="hero-subtitle">
+      De la phase conception (APS/APD/DCE) jusqu'aux notes d'exécution, 
+      j'optimise vos structures métalliques et bois pour réduire les coûts 
+      matière sans compromis sur la sécurité.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Demander un devis</a>
+      <a href="#offres" class="btn-secondary">Voir les offres</a>
+    </div>
+  </div>
+  <div class="hero-visual fade-in">
+    <div class="hero-card">
+      <p class="card-label">Projet récent</p>
+      <p class="card-title">Circuit des 24 Heures du Mans</p>
+      <p class="card-sub">Réhabilitation lourde — ~1 200 t d'acier · APS/APD/DCE</p>
+    </div>
+    <div class="hero-card">
+      <p class="card-label">Spécialités</p>
+      <p class="card-title">Charpente métallique</p>
+      <p class="card-sub">Portiques, planchers, stabilités</p>
+    </div>
+    <div class="hero-card">
+      <p class="card-label">Spécialités</p>
+      <p class="card-title">Ouvrages bois &amp; alu</p>
+      <p class="card-sub">Escaliers, passerelles, pergolas</p>
+    </div>
+  </div>
+</header>
+
+<div class="steel-line"></div>
+
+<!-- OFFRES -->
+<section id="offres">
+  <div class="container">
+    <p class="section-eyebrow">Ce que je fais</p>
+    <h2 class="section-title"><strong>Trois offres</strong>, un interlocuteur unique</h2>
+    <p class="section-lead">
+      Architectes, maîtres d'œuvre, charpentiers, serruriers : chaque métier a ses contraintes. 
+      Je m'adapte à votre phase de projet et à vos livrables attendus.
+    </p>
+    <div class="offres-grid">
+
+      <article class="offre-card fade-in">
+        <p class="offre-num">01</p>
+        <h3 class="offre-title">Études de conception<br>APS / APD / DCE</h3>
+        <p class="offre-desc">
+          Pour les architectes, maîtres d'œuvre, aménageurs et collectivités, j'interviens dès 
+          la phase esquisse pour proposer les dispositions structurelles les plus adaptées : 
+          choix du système porteur, prédimensionnement des sections, métrés acier prévisionnels, 
+          coordination avec les autres corps d'état. Livrables : note de calcul, plans de principe 
+          au format DWG, CCTP lot charpente.
+        </p>
+        <div class="offre-tags">
+          <span class="tag">Bâtiments industriels</span>
+          <span class="tag">Tertiaire</span>
+          <span class="tag">ERP</span>
+          <span class="tag">Logements</span>
+          <span class="tag">DWG</span>
+        </div>
+        <a href="#contact" class="offre-link">En savoir plus →</a>
+      </article>
+
+      <article class="offre-card fade-in">
+        <p class="offre-num">02</p>
+        <h3 class="offre-title">Charpente métallique<br>Notes d'exécution</h3>
+        <p class="offre-desc">
+          Pour les charpentiers métalliques, je produis les notes de calcul d'exécution 
+          nécessaires à la validation du bureau de contrôle : portiques, stabilités, 
+          planchers avec bacs collaborants, assemblages boulonnés ou soudés, ancrages. 
+          L'objectif est d'optimiser les sections pour réduire le tonnage tout en 
+          respectant les Eurocodes.
+        </p>
+        <div class="offre-tags">
+          <span class="tag">Bâtiments agricoles</span>
+          <span class="tag">Industriel</span>
+          <span class="tag">Pont roulant</span>
+          <span class="tag">Eurocode</span>
+        </div>
+        <a href="#contact" class="offre-link">En savoir plus →</a>
+      </article>
+
+      <article class="offre-card fade-in">
+        <p class="offre-num">03</p>
+        <h3 class="offre-title">Ouvrages secondaires<br>Serruriers &amp; métalliers</h3>
+        <p class="offre-desc">
+          Pour les serruriers et métalliers, je dimensionne les ouvrages courants : 
+          escaliers métalliques, passerelles piéton, plateformes industrielles, 
+          pergolas acier ou aluminium, garde-corps. Note de calcul conforme aux normes 
+          en vigueur, adaptée aux exigences de votre bureau de contrôle.
+        </p>
+        <div class="offre-tags">
+          <span class="tag">Escaliers</span>
+          <span class="tag">Passerelles</span>
+          <span class="tag">Pergolas</span>
+          <span class="tag">Aluminium</span>
+          <span class="tag">Garde-corps</span>
+        </div>
+        <a href="#contact" class="offre-link">En savoir plus →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="steel-line"></div>
+
+<!-- ATOUTS -->
+<section id="atouts">
+  <div class="container">
+    <p class="section-eyebrow" style="color: rgba(255,255,255,0.4);">Pourquoi travailler avec moi</p>
+    <h2 class="section-title"><strong>Réactivité, optimisation,</strong><br>coopération</h2>
+    <p class="section-lead">
+      Structure légère, décision rapide. Pas de chef de projet intermédiaire : 
+      vous parlez directement à l'ingénieur qui calcule.
+    </p>
+    <div class="atouts-grid">
+      <div class="atout fade-in">
+        <svg class="atout-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <h3 class="atout-title">Réactivité</h3>
+        <p class="atout-text">
+          Devis sous 24h, délais de rendu adaptés à vos plannings de chantier. 
+          Interlocuteur unique du premier échange à la validation du bureau de contrôle.
+        </p>
+      </div>
+      <div class="atout fade-in">
+        <svg class="atout-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        <h3 class="atout-title">Optimisation des sections</h3>
+        <p class="atout-text">
+          Chaque projet est calculé pour minimiser le tonnage d'acier ou le volume bois, 
+          sans compromettre la sécurité. Un gain de 10 à 20% sur la matière est courant.
+        </p>
+      </div>
+      <div class="atout fade-in">
+        <svg class="atout-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <h3 class="atout-title">Coopération</h3>
+        <p class="atout-text">
+          Habitué à travailler en équipe avec architectes, économistes, 
+          bureaux de contrôle et entreprises. Livrables adaptés à chaque interlocuteur : 
+          DWG, PDF, notes de calcul détaillées.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="steel-line" style="opacity:0.08; background: linear-gradient(90deg, transparent, #fff, transparent);"></div>
+
+<!-- RÉALISATIONS -->
+<section id="realisations">
+  <div class="container">
+    <p class="section-eyebrow">Références</p>
+    <h2 class="section-title">Quelques <strong>réalisations</strong></h2>
+    <p class="section-lead">
+      Sélection de projets représentatifs, de la note d'exécution simple 
+      aux études de conception sur des ouvrages complexes.
+    </p>
+    <div class="real-grid">
+
+      <article class="real-card fade-in">
+        <div class="real-img">
+          <!-- Remplacer par : <img src="images/lemans.jpg" alt="..."> -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D6498" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <div class="real-body">
+          <p class="real-type">Conception APS/APD/DCE</p>
+          <p class="real-title">Réhabilitation circuit 24h du Mans</p>
+          <p class="real-detail">~1 200 t d'acier · Bâtiment principal · Structure mixte acier/béton</p>
+        </div>
+      </article>
+
+      <article class="real-card fade-in">
+        <div class="real-img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D6498" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <div class="real-body">
+          <p class="real-type">Charpente métallique · Exécution</p>
+          <p class="real-title">Bâtiment industriel chantier naval — Rouen</p>
+          <p class="real-detail">Pont roulant 8 t · Portiques encastrés · Optimisation tonnage acier</p>
+        </div>
+      </article>
+
+      <article class="real-card fade-in">
+        <div class="real-img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D6498" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <div class="real-body">
+          <p class="real-type">Bâtiment tertiaire · Conception</p>
+          <p class="real-title">Immeuble de bureaux R+3 — Montpellier</p>
+          <p class="real-detail">Structure acier · Stabilité sans croix apparentes · Validation BdC</p>
+        </div>
+      </article>
+
+      <article class="real-card fade-in">
+        <div class="real-img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D6498" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <div class="real-body">
+          <p class="real-type">Ouvrage public · Exécution</p>
+          <p class="real-title">Passerelle piéton lycée — Béziers</p>
+          <p class="real-detail">Portée 15 m · Éléments U préfabriqués · Tenue au flambement</p>
+        </div>
+      </article>
+
+      <article class="real-card fade-in">
+        <div class="real-img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D6498" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <div class="real-body">
+          <p class="real-type">Bâtiment industriel · Conception</p>
+          <p class="real-title">Laboratoire pharmaceutique R+1 — Orléans</p>
+          <p class="real-detail">Bacs collaborants · Poteaux circulaires · Structures de toiture</p>
+        </div>
+      </article>
+
+      <article class="real-card fade-in">
+        <div class="real-img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D6498" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <div class="real-body">
+          <p class="real-type">Ouvrage scénique · Exécution</p>
+          <p class="real-title">Superstructure scène 160 m²</p>
+          <p class="real-detail">Treillis acier + aluminium · Validation bureau de contrôle</p>
+        </div>
+      </article>
+
+    </div>
+    <p style="margin-top:2rem; font-size:0.8rem; color:var(--ink-muted); font-style:italic;">
+      * Les visuels 3D des modèles de calcul sont disponibles sur demande.
+    </p>
+  </div>
+</section>
+
+<div class="steel-line"></div>
+
+<!-- ZONE -->
+<section id="zone">
+  <div class="container">
+    <div class="zone-content">
+      <div>
+        <p class="section-eyebrow">Zone d'intervention</p>
+        <h2 class="section-title">Basé en <strong>Occitanie</strong>,<br>disponible partout</h2>
+        <p class="section-lead">
+          Ancré dans le Gard et l'Hérault, j'interviens sur l'ensemble du territoire 
+          national pour les projets qui le justifient. Le télétravail couvre 
+          l'essentiel des missions.
+        </p>
+        <div class="zone-list">
+          <div class="zone-item">Hérault (34) — secteur principal</div>
+          <div class="zone-item">Gard (30) — secteur principal</div>
+          <div class="zone-item">Aveyron (12) — secteur régulier</div>
+          <div class="zone-item">Occitanie — intervention courante</div>
+          <div class="zone-item">France entière — projets importants</div>
+        </div>
+        <p class="zone-note">
+          Déplacement possible pour les projets à enjeux (réunions de coordination, 
+          visites site). Missions 10 k€+ traitées sur tout le territoire.
+        </p>
+      </div>
+      <div class="zone-map">
+        <!-- Carte SVG simplifiée de la France avec point Gard/Hérault -->
+        <svg viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;padding:2rem;">
+          <!-- Fond France simplifié -->
+          <path d="M120,20 L180,15 L230,40 L260,80 L270,130 L260,180 L240,230 L220,270 L190,300 L160,320 L130,310 L100,280 L70,250 L50,200 L40,150 L50,100 L70,60 L100,30 Z" 
+                fill="#EEF3FA" stroke="#3D6498" stroke-width="1.5"/>
+          <!-- Point Occitanie -->
+          <circle cx="155" cy="240" r="10" fill="#3D6498" opacity="0.9"/>
+          <circle cx="155" cy="240" r="20" fill="#3D6498" opacity="0.15"/>
+          <text x="155" y="275" text-anchor="middle" font-size="11" fill="#3D6498" font-family="Inter" font-weight="500">Gard · Hérault</text>
+          <!-- Rayon national -->
+          <circle cx="155" cy="240" r="80" fill="none" stroke="#3D6498" stroke-width="1" stroke-dasharray="4 3" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="steel-line"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-eyebrow">Contact</p>
+    <h2 class="section-title">Parlons de <strong>votre projet</strong></h2>
+    <p class="section-lead">
+      Devis gratuit sous 24h. Décrivez votre besoin et je reviens vers vous rapidement.
+    </p>
+    <div class="contact-box">
+      <div class="contact-info">
+        <h3>Thomas Planque-Granger</h3>
+        <p style="font-size:0.875rem;color:var(--ink-soft);margin-bottom:2rem;line-height:1.6;">
+          Ingénieur calcul structure<br>
+          Entrepreneur salarié — Crealead SCOP<br>
+          OPQIBI qualifié
+        </p>
+        <div class="contact-detail">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/>
+          </svg>
+          <span><a href="tel:+33467713717">04 67 71 37 17</a></span>
+        </div>
+        <div class="contact-detail">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span><a href="mailto:contact@leptotech.com">contact@leptotech.com</a></span>
+        </div>
+        <div class="contact-detail">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Cévennes — Gard (30)</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="contact-form-title">Demande de devis</h3>
+        <form action="https://formspree.io/f/VOTRE_ID" method="POST">
+          <div class="form-group">
+            <label for="nom">Nom / Société</label>
+            <input type="text" id="nom" name="nom" required placeholder="Dupont Charpente">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="contact@exemple.fr">
+          </div>
+          <div class="form-group">
+            <label for="profil">Vous êtes</label>
+            <select id="profil" name="profil">
+              <option value="">-- Sélectionner --</option>
+              <option>Architecte / Maître d'œuvre</option>
+              <option>Collectivité / Aménageur</option>
+              <option>Charpentier métallique</option>
+              <option>Serrurier / Métallier</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Description du projet</label>
+            <textarea id="message" name="message" rows="4" placeholder="Type de bâtiment, phase, localisation, délais souhaités..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Envoyer la demande</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="wordmark">LEPTOTECH</span>
+  <span>Ingénieur calcul structure · Occitanie · France</span>
+  <span>© 2025 · <a href="mailto:contact@leptotech.com">contact@leptotech.com</a></span>
+</footer>
+
+<script>
+  // Intersection Observer pour les animations fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Formspree : feedback simple à la soumission
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.form-submit');
+      btn.textContent = 'Envoi en cours…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          btn.textContent = '✓ Message envoyé';
+          form.reset();
+        } else {
+          btn.textContent = 'Erreur — réessayer';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Erreur — réessayer';
+        btn.disabled = false;
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
